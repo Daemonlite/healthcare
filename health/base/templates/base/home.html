@@ -1,0 +1,64 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<body>
+
+  <ul>
+    <li><a href="#">Daemon Healthcare</li></a>
+    {% if request.user.is_authenticated %}
+    <li style="float:right;"><a href="{% url 'logout' %}">Logout</a> {% else %}
+    <a href="{% url 'login' %}">Login</a> {% endif %}</li>
+  </ul>
+
+  <div >
+    <h1 class="h1"><mark>Hello {{request.user}}</mark></h1>
+  </div>
+  
+
+    <section class="sec1">
+      <h1>Talk To a Doctor</h1>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+     Officiis architecto maxime, deserunt tenetur quas mollitia. 
+     Omnis placeat, beatae unde cumque doloremque quibusdam 
+     excepturi eveniet, repudiandae rem ex, ducimus dolor ipsam!
+     Omnis placeat, beatae unde cumque doloremque quibusdam 
+     excepturi eveniet, repudiandae rem ex, ducimus dolor ipsam
+     <hr>
+     <button><a href="{% url 'complaint' %}">Describe Your Illness</a></button>
+
+    </section>
+
+    <section class="sec2">
+      <h1>Get your hospital card</h1>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+     Officiis architecto maxime, deserunt tenetur quas mollitia. 
+     Omnis placeat, beatae unde cumque doloremque quibusdam 
+     excepturi eveniet, repudiandae rem ex, ducimus dolor ipsam!
+     Omnis placeat, beatae unde cumque doloremque quibusdam 
+     excepturi eveniet, repudiandae rem ex, ducimus dolor ipsam
+     <hr>
+     <button><a href="{% url 'hospital_card' %}">Get Card</a></button>
+
+    </section>
+  
+    
+    <section class="table">
+      <h1 style="text-align:center;">Our Doctors</h1>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td>Speciality</td>
+          <td>Status</td>
+        </tr>
+      {% for x in obj %}
+
+      <tr>
+      <td>{{x.name}}</td>
+      <td> {{x.speciality}}</td>
+      <td>{{x.is_available}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    </section>
+</body>
+</html>
+{% endblock content %}

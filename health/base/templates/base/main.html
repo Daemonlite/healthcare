@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daemon healthcare</title>
+</head>
+<style>
+
+.card-body {
+            padding: 20px;
+}
+label {
+            padding-top: 10px !important;
+            display: block;
+            
+}
+a{
+     text-decoration: none;
+     color: black;
+
+ }
+ table,th,td{
+  border: 1px solid #333;
+  text-align: left;
+ }
+ table{
+     border-collapse: collapse;
+     width: 100%;
+ }
+ th td{
+     padding: 15px;
+ }
+ tr:hover{
+     background-color:coral;
+ }
+ tr:nth-child(even){
+     background-color: #f2f2f2;
+ }
+ th{
+     background-color: #04aa6d;
+     color: white;
+ }
+
+ .header-bar {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            padding: 10px;
+            border-radius: 5px 5px 0 0;
+            width: 400px;
+            background: lightblue;
+ }
+ ul{
+    background-color: turquoise;
+    padding: 0;
+    margin:0px;
+    overflow: hidden; 
+    list-style-type: none;
+}
+li{
+    float:left;
+}
+li a{
+    display:block;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+}
+.active{
+    background-color: #04aa6d;
+}
+.sec1{
+    width: 500px;
+    display:block;
+    border: 3px solid lemonchiffon;
+    padding:20px;
+}
+.sec2{
+    width: 500px;
+    display:block;
+    border: 3px solid lemonchiffon;
+    padding:20px;
+ 
+    
+}
+.h1{
+    padding:20px;
+}
+body{background-color: lemonchiffon;}
+body{
+    background-color: #fff;
+    background-size: 100%, 50px 50px;
+    background-image: radial-gradient(
+     circle at bottom right,
+     transparent 0%,
+     transparent 50%
+    ),
+    repeating-linear-gradient(
+    45deg,
+     grey 0,
+     grey 1.5px,
+     #fff 0,
+     #fff 50%
+
+);
+
+}
+
+
+</style>
+<body>
+    {% block content %}{% endblock content %}
+</body>
+</html>
